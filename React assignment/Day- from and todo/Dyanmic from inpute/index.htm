@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your  code will go here
+    function App() {
+      const [hobbies, setHobbies] = React.useState("");
+      const [formstate, setformState] = React.useState([]);
+      function handleSubmit(e) {
+        e.preventDefault();
+        let hobbies={
+            hobbies,
+        }
+      }
+      function handleChange(e) {
+        setHobbies(e.target.value);
+        console.log(hobbies);
+      }
+
+      return (
+        <>
+          <div>
+            <form onSubmit={handleSubmit}>
+              <label> Hobbies :</label>
+              <input
+                type="text"
+                placeholder="enter your hobbies"
+                value={hobbies}
+                onChange={handleChange}
+              />
+              <input type="submit" />
+              <br />
+              <br />
+              <div className="button">
+                <button>Add more hobbies</button>
+                <button>Remove hobbies</button>
+              </div>
+            </form>
+          </div>
+        </>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</html>
