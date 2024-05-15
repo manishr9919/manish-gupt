@@ -77,7 +77,7 @@ salary.addEventListener("change", () => {
 
 */
 
-// -------------------------------------------------------------------------- `New Version of this Code with some Changes by **AJMAT Ali** ` -----------------------------------------
+// -------------------------------------------------------------------------- `New Version of this Code with some Changes by **manish rauniyar** ` -----------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
   let tbody = document.querySelector("tbody");
